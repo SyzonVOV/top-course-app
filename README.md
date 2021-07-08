@@ -5,6 +5,7 @@
 touch tsconfig.json - will create empty file
 npm i -D typescript @types/react @types/node
 npm i -D @typescript-eslint/parser @typescript-eslint/eslint-plugin
+npm i -D stylelint stylelint-config-standard stylelint-order stylelint-order-config-standard
 
 ## Getting Started
 
