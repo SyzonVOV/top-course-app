@@ -22,8 +22,10 @@ a {
 :root {
   --text-main: #3b434e;
   --background: #e5e5e5;
-  --background-component: white;
+  --gary-light: #ebebeb;
+  --white: white;
   --primary: #7653fc;
+  --primary-hover: #6344df;
   --red: #fc836d;
   --green: #1dc37e;
   --green-light: #c8f8e4;
