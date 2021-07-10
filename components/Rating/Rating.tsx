@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, KeyboardEvent } from 'react';
 import cn from 'classnames';
 import { RatingProps } from './Rating.props';
 import styles from './Rating.module.css';
@@ -16,16 +16,42 @@ export const Rating = ({ isEditable = false, rating, setRating, ...props }: Rati
       return (
         <StarIcon
           className={cn(styles.star, {
-            [styles.filled]: i < currentRating
+            [styles.filled]: i < currentRating,
+            [styles.editable]: isEditable
           })}
+          onMouseEnter={() => changeDispay(i + 1)}
+          onClick={() => onClick(i + 1)}
+          tabIndex={isEditable ? 0 : -1}
+          onKeyDown={(e: KeyboardEvent<SVGElement>) => isEditable && handleSpace(i + 1, e)}
         />
       );
     });
     setRatingArray(updatedArray);
   };
 
+  const changeDispay = (i: number) => {
+    if (!isEditable) {
+      return;
+    }
+    constructRating(i);
+  };
+
+  const onClick = (i: number) => {
+    if (!isEditable || !setRating) {
+      return;
+    }
+    setRating(i);
+  };
+
+  const handleSpace = (i: number, e: KeyboardEvent<SVGElement>) => {
+    if (e.code != 'Space' || !setRating) {
+      return;
+    }
+    setRating(i);
+  };
+
   return (
-    <div {...props}>
+    <div {...props} onMouseLeave={() => changeDispay(rating)} className={styles.inline}>
       {ratingArray.map((r, i) => (<span key={i}>{r}</span>))}
     </div>);
 };
