@@ -6,7 +6,7 @@ body {
   color: var(--text-main);
   background: var(--background);
 
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: var(--font-family);
 }
 
 a {

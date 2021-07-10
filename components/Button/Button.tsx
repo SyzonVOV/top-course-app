@@ -10,7 +10,7 @@ export const Button = ({ appearance, children, arrow = 'none', className, ...pro
     [styles.ghost]: appearance === 'ghost',
   });
 
-  const stylesArrow = cn(styles.arrow, {
+  const stylesArrow = cn(styles.arrow, className, {
     [styles.down]: arrow === 'down'
   });
 
