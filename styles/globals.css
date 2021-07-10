@@ -4,7 +4,7 @@ body {
   padding: 0;
 
   color: var(--text-main);
-  background: var(--background);
+  background: var(--white);
 
   font-family: var(--font-family);
 }
@@ -22,7 +22,7 @@ a {
 :root {
   --text-main: #3b434e;
   --background: #e5e5e5;
-  --gary-light: #ebebeb;
+  --gray-light: #ebebebd7;
   --white: white;
   --primary: #7653fc;
   --primary-hover: #6344df;
