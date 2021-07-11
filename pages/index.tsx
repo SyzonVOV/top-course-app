@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import { HTag, Button, PTag, Tag, Rating } from '../components';
-import { Layout } from '../layout';
+import { withLayout } from '../layout';
 
-export default function Home(): JSX.Element {
+function Home(): JSX.Element {
   const [rating, setRating] = useState<number>(4);
 
   return (
-    <Layout>
+    <>
       <HTag tag={'h1'}>Hello</HTag>
       <PTag appearance="big">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</PTag>
       <PTag >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae nobis officia ut delectus tempora similique neque aperiam hic quia facilis.</PTag>
@@ -18,6 +18,8 @@ export default function Home(): JSX.Element {
       <Tag size='s' color='green'>Green</Tag>
       <Tag color='primary'>Green</Tag>
       <Rating rating={rating} isEditable setRating={setRating} />
-    </Layout>
+    </>
   );
 }
+
+export default withLayout(Home);
