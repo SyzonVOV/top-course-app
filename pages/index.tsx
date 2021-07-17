@@ -2,12 +2,10 @@ import { useState } from 'react';
 import { HTag, Button, PTag, Tag, Rating } from '../components';
 import { withLayout } from '../layout';
 import { GetStaticProps } from 'next';
-import { getMenus } from './../api';
 import { MenuItem } from '../interfaces/menu.interface';
-import { TopLevelCategory } from '../interfaces/page.interface';
 import axios from 'axios';
 
-function Home({ menu }: HomeProps): JSX.Element {
+function Home(): JSX.Element {
   const [rating, setRating] = useState<number>(4);
 
   return (
