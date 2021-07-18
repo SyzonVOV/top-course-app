@@ -10,10 +10,12 @@ export const Tag = ({ size = 's', children, color = 'ghost', href, className, ..
       className={stylesTag}
       {...props}
     >
-      {
-        href
-          ? <a href={href}>{children}</a>
-          : <>{children}</>
-      }
+      <span className={styles.inner}>
+        {
+          href
+            ? <a href={href}>{children}</a>
+            : <>{children}</>
+        }
+      </span>
     </div>);
 };
