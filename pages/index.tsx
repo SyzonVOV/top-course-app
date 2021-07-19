@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { HTag, Button, PTag, Tag, Rating } from '../components';
+import { HTag, Button, PTag, Tag, Rating, Input } from '../components';
 import { withLayout } from '../layout';
 import { GetStaticProps } from 'next';
 import { MenuItem } from '../interfaces/menu.interface';
@@ -19,6 +19,7 @@ function Home(): JSX.Element {
       <Tag size='s' color='green'>Green</Tag>
       <Tag color='primary'>Green</Tag>
       <Rating rating={rating} isEditable setRating={setRating} />
+      <Input placeholder="test" />
     </>
   );
 }
