@@ -8,3 +8,4 @@ export * from './HhData';
 export * from './Advantages';
 export * from './Sort';
 export * from './Input';
+export * from './Textarea';
