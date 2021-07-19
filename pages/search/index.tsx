@@ -1,11 +1,17 @@
 import axios from 'axios';
+import { useRouter } from 'next/router';
 import { GetStaticProps } from 'next';
 import { MenuItem } from '../../interfaces/menu.interface';
 import { withLayout } from '../../layout';
+import { Fragment } from 'react';
 
 const Search = (): JSX.Element => {
+  const router = useRouter();
   return (
-    <h2>Search</h2>
+    <Fragment>
+      <h2>Search</h2>
+      <p>Are you looking for {router.query.q}</p>
+    </Fragment>
   );
 };
 
