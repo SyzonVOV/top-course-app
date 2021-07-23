@@ -3,7 +3,7 @@ import cn from 'classnames';
 import Image from 'next/image'
 import { ProductProps } from './Product.props';
 import styles from './Product.module.css';
-import { Card, Rating, Tag, Button, Divider, Review } from '..';
+import { Card, Rating, Tag, Button, Divider, Review, ReviewForm } from '..';
 import { declOfNum, priceHr } from '../../helpers/helpers';
 
 export const Product = ({ product, className, ...props }: ProductProps): JSX.Element => {
@@ -76,8 +76,12 @@ export const Product = ({ product, className, ...props }: ProductProps): JSX.Ele
         [styles.closed]: !isReviewOpened,
       })}>
         {product.reviews.map(r => (
-          <Review key={r._id} review={r} />
+          <>
+            <Review key={r._id} review={r} />
+            <Divider />
+          </>
         ))}
+        <ReviewForm productId={product._id} />
       </Card>
     </>);
 };
