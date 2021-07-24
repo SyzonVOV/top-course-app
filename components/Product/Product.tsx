@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import cn from 'classnames';
-import Image from 'next/image'
+import Image from 'next/image';
 import { ProductProps } from './Product.props';
 import styles from './Product.module.css';
 import { Card, Rating, Tag, Button, Divider, Review, ReviewForm } from '..';
 import { declOfNum, priceHr } from '../../helpers/helpers';
 
-export const Product = ({ product, className, ...props }: ProductProps): JSX.Element => {
+export const Product = ({ product }: ProductProps): JSX.Element => {
   const [isReviewOpened, setIsReviewOpened] = useState<boolean>(false);
 
   return (
