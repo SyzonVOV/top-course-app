@@ -258,7 +258,9 @@
 		margin-bottom: 10px;
 	}
 }
-
+ .rateTitle a {
+	color: var(--primary);
+}
 
 @media screen and (max-width: 480px) {
 	.product {
