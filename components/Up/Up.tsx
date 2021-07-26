@@ -9,9 +9,9 @@ export const Up = (): JSX.Element => {
   // at first animate one property, then another
   const controls = useAnimation();
   const y = useScrollY();
-
+  //TODO: hide the Up button when on top
   useEffect(() => {
-    controls.start({ opacity: y / document.body.scrollHeight });
+    controls.start({ opacity: (y / document.body.scrollHeight) * 3 });
   }, [y, controls]);
 
   const scrollToTop = () => {
