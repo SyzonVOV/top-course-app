@@ -15,3 +15,4 @@ export * from './Divider';
 export * from './Review';
 export * from './ReviewForm';
 export * from './Up';
+export * from './ButtonIcon';
