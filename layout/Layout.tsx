@@ -5,6 +5,7 @@ import { Sidebar } from './Sidebar';
 import { Footer } from './Footer';
 import { FunctionComponent } from 'react';
 import { AppContextProvider, IAppContext } from '../context/app.context';
+import { Up } from '../components';
 
 
 const Layout = ({ children }: LayoutProps): JSX.Element => {
@@ -16,6 +17,7 @@ const Layout = ({ children }: LayoutProps): JSX.Element => {
         {children}
       </main>
       <Footer className={styles.footer} />
+      <Up />
     </div >);
 };
 // ... 12.2
