@@ -19,6 +19,14 @@ a {
   box-sizing: border-box;
 }
 
+.visuallyHidden {
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	position: absolute;
+}
+
+
 :root {
   --text-main: #3b434e;
   --background: #f8f8f8;
