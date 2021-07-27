@@ -20,10 +20,28 @@
 
 .body {
 	grid-area: body;
+	outline: none;
 }
 
 .footer {
 	grid-area: footer;
+}
+
+.skipLink {
+	display: block;
+	position: fixed;
+	left: 100px;
+	top: 0;
+	/* To make it possible to navigate with a keyboard, should use this setup */
+	/* display none or visibility hidden will hide an element from the keys events */
+	overflow: hidden;
+	height: 0;
+	background: var(--primary);
+	color: var(--white);
+}
+
+.displayed {
+	height: auto;
 }
 
 @media (max-width: 765px) {
