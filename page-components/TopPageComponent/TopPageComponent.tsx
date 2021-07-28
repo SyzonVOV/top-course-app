@@ -5,9 +5,11 @@ import styles from './TopPageComponent.module.css';
 import { HTag, Tag, HhData, Advantages, Sort, Product } from "../../components";
 import { TopLevelCategory } from '../../interfaces/page.interface';
 import { SortEnum } from '../../components/Sort/Sort.props';
+import { useReducedMotion } from 'framer-motion';
 
 export const TopPageComponent = ({ page, products, firstCategory }: TopPageComponentProps): JSX.Element => {
   const [{ products: sortedProducts, sort }, dispathSort] = useReducer(sortReducer, { products, sort: SortEnum.Rating });
+  const shouldReduceMotion = useReducedMotion();
 
   const setSort = (sort: SortEnum) => {
     dispathSort({ type: sort });
@@ -25,7 +27,13 @@ export const TopPageComponent = ({ page, products, firstCategory }: TopPageCompo
         <Sort sort={sort} setSort={setSort} />
       </div>
       <div role='list'>
-        {sortedProducts && sortedProducts.map(p => (<Product role='listitem' layout key={p._id} product={p} />))}
+        {sortedProducts && sortedProducts.map(p => (
+          <Product
+            role='listitem'
+            layout={shouldReduceMotion ? false : true}
+            key={p._id} product={p}
+          />
+        ))}
       </div>
       <div className={styles.hhTitle}>
         <HTag tag='h2'>Вакансии - {page.category}</HTag>
