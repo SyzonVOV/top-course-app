@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { AppProps } from 'next/dist/next-server/lib/router/router';
 import '../styles/globals.css';
 
+//* use preconnect for font, GA to speed up loading of a page
 function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
   return <>
     <Head>

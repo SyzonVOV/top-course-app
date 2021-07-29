@@ -20,26 +20,27 @@ a {
 }
 
 .visuallyHidden {
-	width: 0;
-	height: 0;
-	overflow: hidden;
-	position: absolute;
+  position: absolute;
+
+  overflow: hidden;
+
+  width: 0;
+  height: 0;
 }
 
-
 :root {
-  --text-main: #3b434e;
-  --background: #f8f8f8;
+  --text-main: #3B434E;
+  --background: #F8F8F8;
   --gray: #A4A4A4;
-  --gray-light: #ebebebd7;
-  --gray-dark: #6c7077;
+  --gray-light: #EBEBEBD7;
+  --gray-dark: #6C7077;
   --white: white;
-  --primary: #6a4fd2;
-  --primary-hover: #513ba8;
-  --primary-shadow: #562cb880;
-  --red: #fc836d;
-  --red-light: #fea291;
-  --green: #007b48;
-  --green-light: #c8f8e4;
+  --primary: #6A4FD2;
+  --primary-hover: #513BA8;
+  --primary-shadow: #562CB880;
+  --red: #FC836D;
+  --red-light: #FEA291;
+  --green: #007B48;
+  --green-light: #C8F8E4;
   --font-family: 'Noto Sans KR', sans-serif;
 }

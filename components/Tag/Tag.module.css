@@ -1,15 +1,16 @@
 .tag {
   display: inline-flex;
 
-  min-width: 40px;
-
   box-sizing: border-box;
+
+  min-width: 40px;
   margin-right: 5px;
+
   border-radius: 20px;
 }
 
 .inner {
-margin: auto;
+  margin: auto;
 }
 
 .s {
@@ -32,14 +33,14 @@ margin: auto;
 
 .red {
   color: var(--white);
-  background: #de0000;
+  background: #DE0000;
 
   font-weight: bold;
 }
 
 .grey {
   color: var(--white);
-  background: #51648c;
+  background: #51648C;
 
   font-weight: bold;
 }
@@ -53,6 +54,6 @@ margin: auto;
 
 .primary {
   color: var(--primary);
-  background: none;
   border: 1px solid var(--primary);
+  background: none;
 }
