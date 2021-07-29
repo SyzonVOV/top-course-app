@@ -9,7 +9,7 @@ import { firstLevelMenu } from '../../helpers/helpers';
 import { TopPageComponent } from '../../page-components';
 import { API } from '../../helpers/api';
 import Head from 'next/head';
-import { Error404 } from '../404'
+import { Error404 } from '../404';
 
 
 function TopPage({ page, firstCategory, products }: TopPageProps): JSX.Element {
